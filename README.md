@@ -5,3 +5,7 @@ I wrote this for a code challenge. Yes, it's derivative! But I had fun exploring
 ## Contributing
 
 Why?
+
+## License
+
+CC0
