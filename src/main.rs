@@ -463,6 +463,7 @@ pub type Output<const A: &'static str, const B: &'static str> = tcall!(Solution,
 
 You type up a simple example to demonstrate to her.
 */
+// use caw::Output;
 use std::any::type_name;
 
 pub const HELLO: &'static str = type_name::<Output<"Hello, world!", "world">>();
