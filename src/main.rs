@@ -3,19 +3,28 @@
 //! (This was written with very little planning)
 
 /* 
-As you enter the room, you inhale deeply. The air is dry, flaky with the taste of drywall. A worrisome place, akin to a sapling strung on a pendant. You make a mental note not to trust the cranes for directions. 
+As you enter the room, you inhale deeply. The air is dry, flaky with the taste of drywall. A worrisome place, akin to a sapling 
+strung on a pendant. You make a mental note not to trust the cranes for directions. 
 
-The woman behind the worn oak desk gestures you to sit. The name tag on her chest tells you she is Christina. You blink a warm smile. To name a heart is to know it; to wear its name is to wield it. Your own name sprouted many summers after its seedling burrowed into soil. 
+The woman behind the worn oak desk gestures you to sit. The name tag on her chest tells you she is Christina. You blink a warm 
+smile. To name a heart is to know it; to wear its name is to wield it. Your own name sprouted many summers after its seedling 
+burrowed into soil. 
 
-"Hi!" she leads. "Nice to meet you. Please get comfortable! We're going to go through a programming puzzle step by step. You know, to see how you solve problems." Her scurrying words remind you of a white wagtail. You wonder whether she's actually sitting or simply flitting above her chair fast enough to maintain the illusion.
+"Hi!" she leads. "Nice to meet you. Please get comfortable! We're going to go through a programming puzzle step by step. You know, 
+to see how you solve problems." Her scurrying words remind you of a white wagtail. You wonder whether she's actually sitting or 
+simply flitting above her chair fast enough to maintain the illusion.
 
-"Here's the problem. You have two strings, a needle and a haystack. You need to find the first index where the pattern is found inside the base. You should write a function that takes those two strings as input and returns that index, or something else if the needle isn't inside the haystack."
+"Here's the problem. You have two strings, a needle and a haystack. You need to find the first index where the pattern is found 
+inside the base. You should write a function that takes those two strings as input and returns that index, or something else if 
+the needle isn't inside the haystack."
 
-Ah, so the blind mother feeds her child in the nest by night. She finds her young by touch. Poor soul. Under your breath, you utter a brief prayer for health. You look back at Christina inquiringly.
+Ah, so the blind mother feeds her child in the nest by night. She finds her young by touch. Poor soul. Under your breath, you utter 
+a brief prayer for health. You look back at Christina inquiringly.
 
 "You can write this in any language. Our startup mostly uses Python and C, though. Oh, and a little bit of Rust."
 
-"That will work well," you nod. This place might have some life in it after all. You whisper open a terminal, click your right index finger into your left palm and begin the dance: `cargo new --lib caw`
+"That will work well," you nod. This place might have some life in it after all. You whisper open a terminal, click your right 
+index finger into your left palm and begin the dance: `cargo new --lib caw`
 
 You are eager to begin.
 */
@@ -36,7 +45,8 @@ You smile the traces of an apology, but do not delete a line. Every keystroke is
 
 "The mother feeds her young in the night. It is only fair for us to also work in Night."
 
-Christina pretends to understand. You can feel her brow furrowing in concern. Maybe her tail is darting about less frequently. You cannot tell.
+Christina pretends to understand. You can feel her brow furrowing in concern. Maybe her tail is darting about less frequently. 
+You cannot tell.
 
 "We will need a list," you reassure her. To more comforting definitions.
 */
@@ -82,7 +92,9 @@ impl<A, B> Head for Cons<A, B> where B: List {
 
 "Worry not, Christina. It will be as efficient as a cockatoo solving a puzzle."
 
-You remember when you were but a hatchling. You sat perched in moonlight, challenging the stars to count themselves. Your mind was streaked with white ink, and soon the nature flushed over you. Emboldened, you foolishly challenged the empty space between the stars.
+You remember when you were but a hatchling. You sat perched in moonlight, challenging the stars to count themselves. Your mind 
+was streaked with white ink, and soon the nature flushed over you. Emboldened, you foolishly challenged the empty space between 
+the stars.
 
 It was the first lesson of humility you learned. Channel that now; count with heed.
 */
@@ -93,7 +105,8 @@ trait Num {}
 impl Num for Z {}
 impl<T> Num for S<T> where T: Num {}
 /*
-On second thought, you decide to let Christina easy this time. Yield not to the hubris of flight, you think to yourself as you beckon the elders, the primitives.
+On second thought, you decide to let Christina easy this time. Yield not to the hubris of flight, you think to yourself as you 
+beckon the elders, the primitives.
 */
 pub struct Int<const N: usize>;
 
@@ -158,7 +171,8 @@ failure!{
 /*
 The frost around your eyes begins to thaw. Surely Ferris doesn't need to check every number individually?
 
-Christina is eyeing you with a sharp look. You guess there will be about two minutes until she realizes what you're doing with the type system and stops you. 
+Christina is eyeing you with a sharp look. You guess there will be about two minutes until she realizes what you're doing with the 
+type system and stops you. 
 
 "We will want to build up some foundations first," you try to delay. "It's more rigorous that way!"
 
@@ -281,7 +295,8 @@ string!{
 
 "Wait, what do all these macros expand to?"
 
-"About... 60 thousand lines of trait implementations. It will make the solution tidier!" you add on hurriedly. As you do so, you try to comfort Ferris. You promise not to make them recur more than they want.
+"About... 60 thousand lines of trait implementations. It will make the solution tidier!" you add on hurriedly. As you do so, you 
+try to comfort Ferris. You promise not to make them recur more than they want.
 
 You continue. "And also I think it's a little funny," you smile with honesty.
 
@@ -293,7 +308,8 @@ You continue. "And also I think it's a little funny," you smile with honesty.
 
 "Yes, is that alright?" You speak idly while thinking of what to implement next.
 
-"Sure ???" Christina seems a little caught off guard. Maybe the word has special meaning for her. You won't prod, though; you have a crab to appease.
+"Sure ???" Christina seems a little caught off guard. Maybe the word has special meaning for her. You won't prod, though; you have 
+a crab to appease.
 */
 struct True;
 struct False;
@@ -368,7 +384,26 @@ failure!{
     //   = help: consider increasing the recursion limit by adding a `#![recursion_limit = "1024"]` attribute to your crate (`caw`)
     //   = note: required because of the requirements on the impl of `Map` for `(_, Cons<_, Nil>)`
     //   = note: 511 redundant requirements hidden
-    //   = note: required because of the requirements on the impl of `Map` for `(_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Nil>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>)`
+    //   = note: required because of the requirements on the impl of `Map` for `(_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, 
+    //   Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, 
+    //   Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, 
+    //   Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, 
+    //   Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, 
+    //   Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, 
+    //   Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, 
+    //   Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, 
+    //   Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, 
+    //   Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, 
+    //   Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, 
+    //   Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, 
+    //   Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, 
+    //   Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, 
+    //   Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, 
+    //   Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, 
+    //   Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, 
+    //   Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Cons<_, Nil>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    //   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    //   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>)`
     //
     // For more information about this error, try `rustc --explain E0275`.
 }
@@ -379,13 +414,16 @@ This... this is a problem. Is Ferris really this eager?
 
 You remember when you were a nestling. The desire to aid the ill-fated. The urge to mother, to feed my own hatchlings. Is this...
 
-"Ooh, that's a nasty looking error. Do you need some help?" Christina interrupts your memories. "We can walk through the requirements step by step! Okay, so the haystack and needle are both strings. What we want now is a way to match substrings, and-"
+"Ooh, that's a nasty looking error. Do you need some help?" Christina interrupts your memories. "We can walk through the requirements 
+step by step! Okay, so the haystack and needle are both strings. What we want now is a way to match substrings, and-"
 
-"Thank you Christina, I think I can..." Your mind scours frantically for a solution. You can't do anything without lazily evaluated recursive trait bounds.
+"Thank you Christina, I think I can..." Your mind scours frantically for a solution. You can't do anything without lazily evaluated 
+recursive trait bounds.
 
 "... Maybe I'll use more macros." But no, that wouldn't work either! Macrons are untyped.
 
-Perhaps... Perhaps you have to leave the types behind. It will be forever in the file, the relics of an abandoned nest. As much as it pains you, it'll have to be done.
+Perhaps... Perhaps you have to leave the types behind. It will be forever in the file, the relics of an abandoned nest. As much as it 
+pains you, it'll have to be done.
 
 You refuse to do runtime computation. Ferris deserves better.
 */
